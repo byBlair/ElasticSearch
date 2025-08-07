@@ -4,12 +4,17 @@ Elasticsearch를 활용한 뉴스 검색 웹 애플리케이션입니다.
 사용자는 키워드를 입력해 뉴스 콘텐츠를 빠르게 검색할 수 있으며,  
 React 프론트엔드와 Node.js 백엔드, Elasticsearch를 활용해 구현되었습니다.
 
----
-
 ## 📁 폴더 구조
+```
 elastic-news/
-├── backend/ # Node.js 서버 (Elasticsearch 연동)
-├── frontend/ # React 클라이언트 (Tailwind 적용 UI)
+├── backend/
+│ ├── index.js
+│ └── package.json
+├── frontend/
+│ ├── src/
+│ ├── public/
+│ └── package.json
+```
 
 ## 🚀 주요 기술 스택
 
@@ -33,9 +38,8 @@ docker run -d --name elasticsearch \
   -e "discovery.type=single-node" \
   -e "xpack.security.enabled=false" \
   docker.elastic.co/elasticsearch/elasticsearch:8.13.4
-
-
-🔍 주요 기능
+```
+## 🔍 주요 기능
 🔎 뉴스 키워드 검색 (Elasticsearch match 쿼리 기반)
 
 📋 검색 결과를 카드 형태로 출력
@@ -44,7 +48,7 @@ docker run -d --name elasticsearch \
 
 ⚙️ 프록시 설정을 통한 CORS 문제 해결
 
-💡 향후 확장 예정
+## 💡 향후 확장 예정
  날짜 및 카테고리 필터
 
  인기 검색어 집계 (Aggregation)
